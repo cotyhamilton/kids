@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	import type { Animal, AnimalGameLevel } from "$lib/types";
+	import type { Animal } from "$lib/types";
 	import { getCollection } from "$lib/client";
 	import AnimalGame from "$lib/games/animalGame";
 	import { animalGame, animalGameLevel } from "$lib/stores/animalGame";

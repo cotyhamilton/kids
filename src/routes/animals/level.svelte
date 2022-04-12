@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
-	import type { ID } from "@directus/sdk";
 	import { onMount } from "svelte";
 	import { animalGame, animalGameLevel } from "$lib/stores/animalGame";
 	import type { Animal } from "$lib/types";
@@ -49,24 +48,7 @@
 		if (!$animalGameLevel) {
 			await goto("/animals");
 		}
-		// else {
-		// 	answer = $animalGameLevel.answer;
-		// 	options = $animalGameLevel.options;
-		// }
 	});
-
-	const onAnimalClick = async (id: ID) => {
-		if (id === answer.id) {
-			if ($animalGame.lastLevel) {
-				await goto("/animals");
-			} else {
-				$animalGameLevel = $animalGame.getNextGameLevel();
-			}
-		} else {
-			const utterance = new SpeechSynthesisUtterance("Try again");
-			speechSynthesis.speak(utterance);
-		}
-	};
 
 	$: if ($animalGameLevel) {
 		answer = $animalGameLevel.answer;
@@ -106,9 +88,7 @@
 		on:finalize={handleAnswersFinalize}
 	>
 		{#each answers as guess (guess.id)}
-			<span animate:flip={{ duration: flipDurationMs }}
-				><AnimalCard emoji={guess.emoji} on:click={() => onAnimalClick(guess.id)} /></span
-			>
+			<span animate:flip={{ duration: flipDurationMs }}><AnimalCard emoji={guess.emoji} /></span>
 		{/each}
 	</div>
 </div>
