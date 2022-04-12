@@ -15,7 +15,7 @@
 		} catch (error) {
 			console.error({ message: "Error on fetch", reason: error.message, collection });
 		}
-		$animalGame = new AnimalGame(animals, 5);
+		$animalGame = new AnimalGame(animals, 10);
 	});
 
 	const startGame = () => {
