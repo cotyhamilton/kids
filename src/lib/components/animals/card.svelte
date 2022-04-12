@@ -11,7 +11,6 @@
 		align-items: center;
 		border: 1px solid black;
 		border-radius: 2rem;
-		cursor: pointer;
 		display: flex;
 		font-size: 2rem;
 		height: 100%;
