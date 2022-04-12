@@ -73,8 +73,6 @@
 		answer = $animalGameLevel.answer;
 		options = $animalGameLevel.options;
 	}
-
-	$: console.log(targetDisabled);
 </script>
 
 <button on:click={() => goto("/animals")}>Back</button>
@@ -90,9 +88,7 @@
 	on:finalize={handleOptionsFinalize}
 >
 	{#each options as option (option.id)}
-		<span animate:flip={{ duration: flipDurationMs }}>
-			<AnimalCard emoji={option.emoji} /></span
-		>
+		<span animate:flip={{ duration: flipDurationMs }}> <AnimalCard emoji={option.emoji} /></span>
 	{/each}
 </div>
 

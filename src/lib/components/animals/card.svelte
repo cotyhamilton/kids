@@ -22,8 +22,8 @@
 	}
 	div::before {
 		content: "";
-      display: block;
-      padding-bottom: 100%;
+		display: block;
+		padding-bottom: 100%;
 	}
 
 	h1 {
