@@ -84,14 +84,13 @@
 {/if}
 
 <div
-	class="options-container"
+	class="options-container grid"
 	use:dndzone={{ items: options, flipDurationMs, dropTargetStyle: { outline: "none" } }}
 	on:consider={handleOptionsConsider}
 	on:finalize={handleOptionsFinalize}
 >
 	{#each options as option (option.id)}
 		<span animate:flip={{ duration: flipDurationMs }}>
-			<!-- <AnimalCard emoji={option.emoji} on:click={() => onAnimalClick(option.id)} /> -->
 			<AnimalCard emoji={option.emoji} /></span
 		>
 	{/each}
@@ -121,22 +120,27 @@
 	h1 {
 		text-align: center;
 	}
-	.options-container {
-		display: flex;
-		justify-content: space-around;
-	}
+
 	.target-container {
 		display: flex;
 		justify-content: space-around;
 		margin: 3rem;
 	}
+
 	.target {
 		border: 3px dashed lightskyblue;
 		border-radius: 2rem;
-		height: 11rem;
-		width: 11rem;
+		height: 200px;
+		width: 200px;
 	}
+
 	span:focus {
 		outline: none;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 1rem;
 	}
 </style>

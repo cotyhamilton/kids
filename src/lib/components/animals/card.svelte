@@ -13,9 +13,21 @@
 		border-radius: 2rem;
 		cursor: pointer;
 		display: flex;
-		font-size: 3rem;
-		height: 10rem;
+		font-size: 2rem;
+		height: 100%;
 		justify-content: center;
-		width: 10rem;
+		margin: auto;
+		max-width: 200px;
+		width: 100%;
+	}
+	div::before {
+		content: "";
+      display: block;
+      padding-bottom: 100%;
+	}
+
+	h1 {
+		padding: 0;
+		margin: 0;
 	}
 </style>
