@@ -48,12 +48,11 @@
 	onMount(async () => {
 		if (!$animalGameLevel) {
 			await goto("/animals");
-		} else {
-			answer = $animalGameLevel.answer;
-			options = $animalGameLevel.options;
-			const utterance = new SpeechSynthesisUtterance(answer.name);
-			speechSynthesis.speak(utterance);
 		}
+		// else {
+		// 	answer = $animalGameLevel.answer;
+		// 	options = $animalGameLevel.options;
+		// }
 	});
 
 	const onAnimalClick = async (id: ID) => {
@@ -72,6 +71,8 @@
 	$: if ($animalGameLevel) {
 		answer = $animalGameLevel.answer;
 		options = $animalGameLevel.options;
+		const utterance = new SpeechSynthesisUtterance(answer.name);
+		speechSynthesis.speak(utterance);
 	}
 </script>
 
