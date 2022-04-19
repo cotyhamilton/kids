@@ -4,7 +4,10 @@
 	import { getCollection } from "$lib/client";
 	import AnimalGame from "$lib/games/animalGame";
 	import { animalGame, animalGameLevel } from "$lib/stores/animalGame";
+	import BackButton from "$lib/components/common/BackButton.svelte";
 	import { goto } from "$app/navigation";
+	import Button from "../../lib/components/common/Button.svelte";
+	import Heading from "../../lib/components/common/Heading.svelte";
 
 	let animals: Animal[] = [];
 
@@ -24,6 +27,6 @@
 	};
 </script>
 
-<button on:click={() => goto("/")}>Back</button>
-<h1>Animals</h1>
-<button on:click={startGame} disabled={!$animalGame}>Play</button>
+<BackButton on:click={() => goto("/")} />
+<Heading>Animals</Heading>
+<Button on:click={startGame} disabled={!$animalGame}>play</Button>

@@ -6,6 +6,8 @@
 	import AnimalCard from "$lib/components/animals/card.svelte";
 	import { flip } from "svelte/animate";
 	import { dndzone } from "svelte-dnd-action";
+	import BackButton from "$lib/components/common/BackButton.svelte";
+	import Heading from "../../lib/components/common/Heading.svelte";
 
 	const flipDurationMs = 300;
 	function handleOptionsConsider(e) {
@@ -58,10 +60,11 @@
 	}
 </script>
 
-<button on:click={() => goto("/animals")}>Back</button>
+<BackButton on:click={() => goto("/animals")} />
 
 {#if answer}
-	<h1>{answer.name}</h1>
+	<!-- <h1>{answer.name}</h1> -->
+	<Heading>{answer.name}</Heading>
 {/if}
 
 <div
@@ -94,10 +97,6 @@
 </div>
 
 <style>
-	h1 {
-		text-align: center;
-	}
-
 	.target-container {
 		display: flex;
 		justify-content: space-around;

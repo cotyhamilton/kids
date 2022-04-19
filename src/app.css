@@ -2,6 +2,17 @@
 	--spacing: 1rem;
 }
 
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
 html {
 	box-sizing: border-box;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
@@ -10,10 +21,13 @@ html {
 	touch-action: none;
 }
 
-*,
-*:before,
-*:after {
-	box-sizing: inherit;
+.background {
+	height: 100vh;
+	background-image: repeating-conic-gradient(
+		from 3deg at 50% 105%,
+		#278dce 0 9deg,
+		#42a6dc 9deg 18deg
+	);
 }
 
 .container {

@@ -9,8 +9,9 @@
 <style>
 	div {
 		align-items: center;
-		border: 1px solid black;
+		background-color: #3f9ed1;
 		border-radius: 2rem;
+		box-shadow: 0 -8px #1b6390 inset;
 		display: flex;
 		font-size: 2rem;
 		height: 100%;
@@ -23,10 +24,5 @@
 		content: "";
 		display: block;
 		padding-bottom: 100%;
-	}
-
-	h1 {
-		padding: 0;
-		margin: 0;
 	}
 </style>
