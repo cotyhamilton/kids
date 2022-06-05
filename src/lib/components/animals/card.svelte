@@ -1,8 +1,9 @@
 <script lang="ts">
 	export let emoji: string;
+	export let style: string;
 </script>
 
-<div on:click>
+<div on:click {style}>
 	<h1>{emoji}</h1>
 </div>
 

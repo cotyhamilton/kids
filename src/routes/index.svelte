@@ -6,4 +6,4 @@
 
 <Heading>Games</Heading>
 
-<AnimalCard emoji={"🦄"} on:click={() => goto("/animals")} />
+<AnimalCard emoji={"🦄"} style={"cursor: pointer;"} on:click={() => goto("/animals")} />
