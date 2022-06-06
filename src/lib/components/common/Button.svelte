@@ -11,7 +11,7 @@
 		border-radius: 1rem;
 		border: none;
 		box-shadow: 0 -4px #38c15f inset;
-		color: inherit;
+		color: #000;
 		cursor: pointer;
 		display: block;
 		font-size: 2rem;
@@ -21,5 +21,10 @@
 		margin-top: 1rem;
 		text-transform: uppercase;
 		width: 100%;
+	}
+	button:disabled {
+		background-color: #66de80;
+		box-shadow: 0 -4px #71c689 inset;
+		color: #666;
 	}
 </style>
