@@ -22,6 +22,10 @@
 	});
 
 	const startGame = () => {
+		// User interaction required for first speech synth use on iOS
+		const utterance = new SpeechSynthesisUtterance("");
+		utterance.volume = 0;
+		speechSynthesis.speak(utterance);
 		$animalGameLevel = $animalGame.getNextGameLevel();
 		goto("/animals/level");
 	};
