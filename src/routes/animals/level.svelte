@@ -63,7 +63,6 @@
 <BackButton on:click={() => goto("/animals")} />
 
 {#if answer}
-	<!-- <h1>{answer.name}</h1> -->
 	<Heading>{answer.name}</Heading>
 {/if}
 
